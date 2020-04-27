@@ -2737,6 +2737,11 @@ int drmDropMaster(int fd)
         return drmIoctl(fd, DRM_IOCTL_DROP_MASTER, NULL);
 }
 
+int drmGetGvtg(int fd)
+{
+        return drmIoctl(fd, DRM_IOCTL_GET_GVTG_ACTIVE, NULL);
+}
+
 char *drmGetDeviceNameFromFd(int fd)
 {
     char name[128];
