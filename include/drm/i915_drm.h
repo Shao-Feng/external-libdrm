@@ -321,6 +321,8 @@ typedef struct _drm_i915_sarea {
 #define DRM_I915_QUERY			0x39
 #define DRM_I915_GEM_ACCESS_USERDATA   0x3c
 
+#define DRM_I915_GET_GVTG_ACTIVE        0x3d
+
 #define DRM_IOCTL_I915_INIT		DRM_IOW( DRM_COMMAND_BASE + DRM_I915_INIT, drm_i915_init_t)
 #define DRM_IOCTL_I915_FLUSH		DRM_IO ( DRM_COMMAND_BASE + DRM_I915_FLUSH)
 #define DRM_IOCTL_I915_FLIP		DRM_IO ( DRM_COMMAND_BASE + DRM_I915_FLIP)
@@ -379,6 +381,8 @@ typedef struct _drm_i915_sarea {
 #define DRM_IOCTL_I915_PERF_REMOVE_CONFIG	DRM_IOW(DRM_COMMAND_BASE + DRM_I915_PERF_REMOVE_CONFIG, __u64)
 #define DRM_IOCTL_I915_QUERY			DRM_IOWR(DRM_COMMAND_BASE + DRM_I915_QUERY, struct drm_i915_query)
 #define DRM_IOCTL_I915_GEM_ACCESS_USERDATA     DRM_IOWR(DRM_COMMAND_BASE + DRM_I915_GEM_ACCESS_USERDATA, struct drm_i915_gem_access_userdata)
+
+#define DRM_IOCTL_I915_GET_GVTG_ACTIVE   DRM_IO(DRM_COMMAND_BASE + DRM_I915_GET_GVTG_ACTIVE)
 
 /* Allow drivers to submit batchbuffers directly to hardware, relying
  * on the security mechanisms provided by hardware.
